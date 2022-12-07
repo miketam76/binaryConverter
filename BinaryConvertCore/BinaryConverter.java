@@ -2,18 +2,18 @@ package BinaryConvertCore;
 
 /*
  * Class name: BinaryConverter
- * Description: Contains methods which converts a integer type value to binary (32 bit) stored in a String
+ * Description: Contains methods which converts a integer type value to binary (8 bit) stored in a String
  * object
  */
 
-public class BinaryConverter implements BinaryInterface {
+/* This is a utility type class - This Class acts as the Model*/
+public class BinaryConverter {
 	
-	
-	// Constructors
-	public BinaryConverter() { }
+	// Constructors - Utility class - Cannot instantiate
+	private BinaryConverter() { }
 	
 	// Converts an integer to binary - also shows the calculation breakdown
-	public String convertToBinary(int number) {
+	public static String convertToBinary(int number) {
 		int remainder;
 		String binaryValue = "";
 		
@@ -32,30 +32,25 @@ public class BinaryConverter implements BinaryInterface {
 		return binaryValue;
 	}
 	
-	@Override
-	public void twosComplement(int number) {
-		// TODO Auto-generated method stub
+	public static String twosComplement(int number) {
+		return null;
+		// TODO Add code for two's complement
 		
 	}
-	@Override
-	public void convertToSinglePrecision() {
-		// TODO Auto-generated method stub
+	public static String convertToSinglePrecision() {
+		return null;
+		// TODO Add code for IEEE-754 Single precision
 		
 	}
-	@Override
-	public void convertToDoublePrecision() {
-		// TODO Auto-generated method stub
+	public static String convertToDoublePrecision() {
+		return null;
+		// TODO Add code for IEEE-754 Double precision
 		
 	}
-	@Override
-	public void addTwoBinaryNumbers(int a, int b) {
-		// TODO Auto-generated method stub
+	public static String addTwoBinaryNumbers(int a, int b) {
+		return null;
+		// TODO Add code to add two numbers and determine if either value
+		// requires a two's complement conversion
 		
 	}
-	@Override
-	public void subtractTwoBinaryNumbers(int a, int b) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }

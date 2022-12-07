@@ -1,20 +1,29 @@
 package BinaryConvertCore;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/* Utility class using Controller Interface */
 public class ConverterController implements Controller {
-	Scanner keyboard = new Scanner(System.in);
+	private static Scanner keyboard = new Scanner(System.in);
 	
-	BinaryConverter converter = new BinaryConverter();
+	private ConverterController() {}
 	
-	public ConverterController() {}
+	public static String convertToBinary(int number) { return BinaryConverter.convertToBinary(number); }
 	
-	public String convertToBinary(int number) { return converter.convertToBinary(number); }
-	
-	public int getInput(String message) {
-		boolean goodInput = false;
+	public static int getInput(String message) {
+		
+		System.out.print(message);
+		while(!keyboard.hasNextInt()) {
+			System.out.println();
+			System.out.print(message);
+			keyboard.nextLine();
+		}
+		return keyboard.nextInt();
+		
+		// Alternative method using try/catch
+		/*
 		int input = 0;
+		boolean goodInput = false;
 		do {
 			try {
 				System.out.print(message);
@@ -27,13 +36,7 @@ public class ConverterController implements Controller {
 			}
 		}
 		while(!goodInput);
-		/*
-		while(!keyboard.hasNextInt()) {
-			System.out.println();
-			System.out.print(message);
-			keyboard.nextLine();
-		}
+		return input;
 		*/
-		return input;			
 	}
 }
