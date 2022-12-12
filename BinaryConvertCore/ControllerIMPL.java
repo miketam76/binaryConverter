@@ -3,12 +3,11 @@ package BinaryConvertCore;
 import java.util.Scanner;
 
 /* Utility class using Controller Interface */
-public class ConverterController implements Controller {
+public class ControllerIMPL implements Controller {
 	private static Scanner keyboard = new Scanner(System.in);
 	
-	private ConverterController() {}
-	
-	public static String convertToBinary(int number) { return BinaryConverter.convertToBinary(number); }
+	private ControllerIMPL() {}
+	public static String convertToBinary(int number) { return ModelBinaryConverter.convertToBinary(number); }
 	
 	public static int getInput(String message) {
 		
