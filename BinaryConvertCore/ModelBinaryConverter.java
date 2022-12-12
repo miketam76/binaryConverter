@@ -7,10 +7,10 @@ package BinaryConvertCore;
  */
 
 /* This is a utility type class - This Class acts as the Model*/
-public class BinaryConverter {
+public class ModelBinaryConverter {
 	
 	// Constructors - Utility class - Cannot instantiate
-	private BinaryConverter() { }
+	private ModelBinaryConverter() { }
 	
 	// Converts an integer to binary - also shows the calculation breakdown
 	public static String convertToBinary(int number) {
